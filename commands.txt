@@ -1,0 +1,112 @@
+whoami
+pwd
+uname 
+uname -a
+df 
+df -h
+free 
+free -h
+echo  mostrar
+cat   concatenar 
+
+ls
+rm
+
+redireccional la salida de comandos
+
+// salida estandar
+uname 1> salida.dat  
+
+// error estandar
+uname -y 2> error.dat
+
+//Combinar ambos
+uname -y > log.dat 2>&1
+
+acumular la información
+uname >> salida.dat
+uname -y >> log.dat 2>&1
+
+// numero de terminales
+w
+
+
+// uso del pipe    contruir paramétros con comandos para luego ingresarlo a otros comandos
+uname -a | cat
+---------------
+echo "-a" > parameters
+cat parameters | xargs uname
+
+date, cal     fecha y calendario
+
+
+-------------------
+ver procesos
+-------------------
+
+ps
+ps x 	procesos que están ocurriendo en un terminal específicas (en background)
+ps xa   todos los procesos
+ps xau  todos los procesos con el usuario
+pstree -p
+
+.-----------------
+kill -9 PID
+killall nombredelproceso
+------------------
+ls
+ls -l  details
+ls -al hidden files
+ls .   current folder
+ls ..  directiorio anterior
+ls *.jpg
+ll
+ls --color
+------------------
+mkdir folder       new folder
+cp  -r   	copiar recursivamente
+cp  -p          mismos permisos
+cp  -f          forza la copia
+
+rm              borrar
+rm -r		borra recursivamente
+rm -f           forzar
+
+mv 
+
+---------------------
+
+find / -name etc
+redireccionar hacia el puntero null
+find / -name etc 2> /dev/null
+
+----------------------
+mc
+
+----------------------
+
+du -bsh *
+
+---------------------
+compresion
+tar cvf   output.tar        input
+----zip
+tar zcvf  output.tar.gz     input
+---bzip2
+tar jcvf  output.tar.bz2    input
+descompresion
+
+en los anteriores poner cambiar el flag c por x
+
+visualizar el contenido
+tar tvf output.tar
+--------------------------
+usando zip
+zip -r output.zip input
+unzip -v output.zip
+--------------------------
+usando rar
+rar   a output.rar input
+unrar x output.rar
+
+
