@@ -88,25 +88,20 @@ mc
 du -bsh *
 
 ---------------------
-compresion
-tar cvf   output.tar        input
-----zip
-tar zcvf  output.tar.gz     input
----bzip2
-tar jcvf  output.tar.bz2    input
-descompresion
-
-en los anteriores poner cambiar el flag c por x
-
+Empaquetamiento -----
+tar cvf output.tar input
+---------------------
 visualizar el contenido
 tar tvf output.tar
---------------------------
-usando zip
-zip -r output.zip input
-unzip -v output.zip
---------------------------
-usando rar
-rar   a output.rar input
-unrar x output.rar
-
+---------------------
+Compresion 				Descompresion
+ --- zip ----
+gzip ouput.tar	      			gunzip ouput.tar.gz
+tar zcvf output.tar.gz  input.tar	tar zxvf output.tar.gz 
+---bzip2
+tar jcvf  output.tar.bz2 input		tar jxvf  output.tar.bz2 
+ ----- otro zip -------
+zip -r output.zip input			unzip -v output.zip 
+ ----- winrar ---------
+rar a output.rar input 			unrar x output.rar
 
