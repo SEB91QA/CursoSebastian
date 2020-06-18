@@ -4,6 +4,7 @@ uname
 uname -a
 df 
 df -h
+
 free 
 free -h
 echo  mostrar
@@ -86,6 +87,7 @@ mc
 ----------------------
 
 du -bsh *
+du -chs * | sort -nr
 
 ---------------------
 Empaquetamiento -----
