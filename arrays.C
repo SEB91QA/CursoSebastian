@@ -1,5 +1,6 @@
+#include <iterator>
 
-std::vector<float> fillVector( float array[], int size ) {
+std::vector<float> fillVector(float array[], int size ) {
 
     std::vector<float> tmp;
 
@@ -37,6 +38,14 @@ void arrays() {
     cout << " local array " << &My_array[0] <<endl;
 
     int size = fillArray(My_array);
+
+    int size_ = sizeof(My_array)/sizeof(My_array[0]);
+    
+    for(auto it : My_array) // por valor 
+    //for(auto &it : My_array) // por referencia
+	    cout << it << endl; 
+
+    cout << size_ << endl;
 
     std::vector<float> Myvector;
 
